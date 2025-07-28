@@ -12,7 +12,7 @@ void insert(int pos, int val){
         printf("Array is Full!!");
         return;
     }
-    for(i = n; i > pos; i--){
+    for(i=n; i>pos; i--){
         arr[i] = arr[i-1];
     }
     arr[pos] = val;
