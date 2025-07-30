@@ -1,5 +1,3 @@
-#include <stdio.h>
-#include <stdlib.h>
 #define size 100
 int arr[size];
 int n = 0;
