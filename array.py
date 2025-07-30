@@ -13,6 +13,20 @@ def search(matrix, val):
                 return (r+1,c+1)
     return -1
 
+def rotate_90(matrix):
+    rot = []
+    rotate_matrix = []
+    row = len(matrix[0])
+    col = len(matrix)
+    for r in range(row):
+        for c in range(col,0,-1):
+            rot.extend(r[c])
+        rotate_matrix.append(rot)
+    
+    return rotate_matrix
+        
+
+
 
 mat = [[1,2,3],[4,5,6],[7,8,9]]
-print(search(mat,9))
+print(rotate_90(mat))
