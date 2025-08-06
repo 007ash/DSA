@@ -67,22 +67,45 @@ void update(int pos, int val){
 }
 
 int main(){
-    insert(0, 10);
-    insert(1, 20);
-    insert(1, 15);
-    display();
-    printf("\n");
-    delete(0);
-    display();
-    int index = search(15);
-    if(index != -1){
-        printf("\nElement found at index: %d\n", index);
-    } else {
-        printf("\nElement not found\n");
+    printf("Array Operations:\n");
+    printf("1. Insert\n 2. Delete\n 3. Search\n 4. Display\n 5. Update\n 6. Exit\n");
+    int choice, pos, val;
+    while(1){
+        printf("Enter your choice: ");
+        scanf("%d", &choice);
+        switch(choice){
+            case 1:
+                printf("Enter position and value to insert: ");
+                scanf("%d %d", &pos, &val);
+                insert(pos, val);
+                break;
+            case 2:
+                printf("Enter position to delete: ");
+                scanf("%d", &pos);
+                delete(pos);
+                break;
+            case 3:
+                printf("Enter value to search: ");
+                scanf("%d", &val);
+                pos = search(val);
+                if(pos != -1)
+                    printf("Value found at position: %d\n", pos);
+                else
+                    printf("Value not found\n");
+                break;
+            case 4:
+                display();
+                printf("\n");
+                break;
+            case 5:
+                printf("Enter position and new value to update: ");
+                scanf("%d %d", &pos, &val);
+                update(pos, val);
+                break;
+            case 6:
+                return 0;
+            default:
+                printf("Invalid choice! Please try again.\n");
+        }
     }
-    display();
-    printf("\n");
-    update(0,50);
-    display();
-    return 0;
 }
