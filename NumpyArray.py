@@ -8,3 +8,9 @@ def insert(arr, val):
 def delete(arr, val):
     return arr[arr != val]
 
+def search(arr, val):
+    i = np.where(arr == val)
+    if i[idx(0)]:
+        return i[0][0] + 1 
+    return -1
+
