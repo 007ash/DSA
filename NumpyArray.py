@@ -10,7 +10,7 @@ def delete(arr, val):
 
 def search(arr, val):
     i = np.where(arr == val)
-    if i[idx(0)]:
+    if i[i(0)]:
         return i[0][0] + 1 
     return -1
 
